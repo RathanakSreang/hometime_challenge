@@ -1,0 +1,85 @@
+---
+openapi: 3.0.1
+info:
+  title: Hometime API V1
+  version: v1
+paths:
+  "/api/v1/reservations/registration":
+    post:
+      summary: registration reservation payload 2
+      parameters: []
+      responses:
+        '200':
+          description: successful
+        '400':
+          description: invalid_resource
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reservation:
+                  type: object
+                  properties:
+                    start_date:
+                      type: string
+                    end_date:
+                      type: string
+                    guest_details:
+                      type: object
+                      properties:
+                        number_of_adults:
+                          type: integer
+                        number_of_children:
+                          type: integer
+                        number_of_infants:
+                          type: integer
+                    guest_email:
+                      type: string
+                    guest_first_name:
+                      type: string
+                    guest_last_name:
+                      type: string
+                    guest_phone_numbers:
+                      type: array
+                    listing_security_price_accurate:
+                      type: string
+                    host_currency:
+                      type: string
+                    nights:
+                      type: integer
+                    number_of_guests:
+                      type: integer
+                    status_type:
+                      type: string
+                    expected_payout_amount:
+                      type: string
+                    total_paid_amount_accurate:
+                      type: string
+  "/api/v1/reservations":
+    get:
+      summary: list reservations
+      responses:
+        '200':
+          description: successful
+  "/api/v1/reservations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show reservation
+      responses:
+        '200':
+          description: successful
+        '404':
+          description: not_found
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000

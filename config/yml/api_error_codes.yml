@@ -1,0 +1,16 @@
+invalid_resource:
+  code: "2001"
+  status: "400"
+  title: "Bad Request"
+
+not_found:
+  code: "404"
+  status: "404"
+  title: "Not Found"
+  details: "Resource not found."
+
+missing_param:
+  code: "400"
+  status: "400"
+  title: "Missing Parameter"
+  details: "Resource parameter missing."

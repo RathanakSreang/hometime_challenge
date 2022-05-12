@@ -1,0 +1,75 @@
+payload_1:
+  identifier_keys: ["guest", "start_date", "end_date"]
+  guest_fields_mapper:
+    first_name:
+      field: "guest.first_name"
+    last_name:
+      field: "guest.last_name"
+    email:
+      field: "guest.email"
+    phones:
+      field: "guest.phone"
+      is_array: true
+  reservation_fields_mapper:
+    start_date:
+      field: "start_date"
+    end_date:
+      field: "end_date"
+    status:
+      field: "status"
+    currency:
+      field: "currency"
+    payout_price:
+      field: "payout_price"
+    security_price:
+      field: "security_price"
+    total_price:
+      field: "total_price"
+    total_nights:
+      field: "nights"
+    total_guests:
+      field: "guests"
+    number_of_adults:
+      field: "adults"
+    number_of_children:
+      field: "children"
+    number_of_infants:
+      field: "infants"
+
+payload_2:
+  identifier_keys: ["reservation"]
+  guest_fields_mapper:
+    first_name:
+      field: "reservation.guest_first_name"
+    last_name:
+      field: "reservation.guest_last_name"
+    email:
+      field: "reservation.guest_email"
+    phones:
+      field: "reservation.guest_phone_numbers"
+      is_array: true
+  reservation_fields_mapper:
+    start_date:
+      field: "reservation.start_date"
+    end_date:
+      field: "reservation.end_date"
+    status:
+      field: "reservation.status_type"
+    currency:
+      field: "reservation.host_currency"
+    payout_price:
+      field: "reservation.expected_payout_amount"
+    security_price:
+      field: "reservation.listing_security_price_accurate"
+    total_price:
+      field: "reservation.total_paid_amount_accurate"
+    total_nights:
+      field: "reservation.nights"
+    total_guests:
+      field: "reservation.number_of_guests"
+    number_of_adults:
+      field: "reservation.guest_details.number_of_adults"
+    number_of_children:
+      field: "reservation.guest_details.number_of_children"
+    number_of_infants:
+      field: "reservation.guest_details.number_of_infants"
