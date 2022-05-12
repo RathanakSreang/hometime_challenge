@@ -30,6 +30,9 @@ RSpec.configure do |config|
               default: "localhost:3000"
             }
           }
+        },
+        {
+          url: "https://agile-peak-44926.herokuapp.com"
         }
       ]
     }

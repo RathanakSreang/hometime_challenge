@@ -80,3 +80,14 @@ Access API doc
 ### Deployment
 
 #### 1. Heroku
+
+```
+heroku create
+git push heroku master
+heroku run rake db:migrate
+heroku open
+heroku logs
+heroku run rails console
+
+Visit: https://agile-peak-44926.herokuapp.com/api-docs/index.html
+```
